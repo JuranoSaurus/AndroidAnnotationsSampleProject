@@ -32,7 +32,7 @@ apt {
         // if you have multiple outputs (when using splits), you may want to have other index than 0
 
         // If you're using flavors you should use the following line instead of hard-coded packageName
-        resourcePackageName "com.juranoaa.sample2"
+        resourcePackageName "com.juranoaa.setting"
 
         // You can set optional annotation processing options here, like these commented options:
         logLevel 'INFO'
@@ -45,7 +45,7 @@ android {
     buildToolsVersion "23"
 
     defaultConfig {
-        applicationId "com.juranoaa.sample2"
+        applicationId "com.juranoaa.setting"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
