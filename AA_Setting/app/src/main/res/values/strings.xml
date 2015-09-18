@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidAnntations</string>
+    <string name="hello">"Hello, the date is %s!"</string>
 </resources>
