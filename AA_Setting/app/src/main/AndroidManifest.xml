@@ -16,6 +16,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".AANextActivity_">
+        </activity>
+
     </application>
 
 </manifest>

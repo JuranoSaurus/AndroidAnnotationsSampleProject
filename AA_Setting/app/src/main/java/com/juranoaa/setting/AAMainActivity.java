@@ -1,9 +1,11 @@
 package com.juranoaa.setting;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.widget.TextView;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.res.StringRes;
@@ -28,5 +30,11 @@ public class AAMainActivity extends Activity{
         String helloMessage = String.format(hello, now.toString());
         helloTextView.setText(helloMessage);
     }
+
+    @Click
+    void button(){
+        AANextActivity_.intent(getApplicationContext()).flags(Intent.FLAG_ACTIVITY_NEW_TASK).myStringExtra("text").start();
+    }
+
 
 }
