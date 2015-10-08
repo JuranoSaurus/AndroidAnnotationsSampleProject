@@ -37,12 +37,7 @@ public class AAMainActivity extends Activity{
 
     @Click
     void button(){
-        // AANextActivity_.intent(this).myStringExtra("text").start();
-        Log.d(TAG, ""+getApplicationContext());
-        Log.d(TAG, ""+getBaseContext());
-        Log.d(TAG, ""+this);
-        Log.d(TAG, ""+helloTextView.getContext());
-        AANextActivity_.intent(getBaseContext()).myStringExtra(TAG).startForResult(NEXT_REQUEST_CODE);
+        AANextActivity_.intent(this).myStringExtra(TAG).startForResult(NEXT_REQUEST_CODE);
     }
 
     @OnActivityResult(NEXT_REQUEST_CODE)
