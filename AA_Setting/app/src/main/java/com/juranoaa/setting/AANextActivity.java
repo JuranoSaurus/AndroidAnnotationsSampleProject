@@ -1,6 +1,7 @@
 package com.juranoaa.setting;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 
 import org.androidannotations.annotations.AfterExtras;
@@ -21,6 +22,11 @@ public class AANextActivity extends Activity{
     @AfterExtras
     void after(){
         Log.d(TAG, myStringExtra);
+
+        Intent intent = new Intent();
+        intent.putExtra("myStringExtra", TAG);
+        this.setResult(RESULT_OK, intent);
+        this.finish();
     }
 
 }
