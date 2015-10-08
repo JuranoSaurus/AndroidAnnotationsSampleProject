@@ -24,7 +24,7 @@ public class AANextActivity extends Activity{
         Log.d(TAG, myStringExtra);
 
         Intent intent = new Intent();
-        intent.putExtra("myStringExtra", TAG);
+        intent.putExtra(AAMainActivity_.MY_STRING_EXTRA, TAG);
         this.setResult(RESULT_OK, intent);
         this.finish();
     }

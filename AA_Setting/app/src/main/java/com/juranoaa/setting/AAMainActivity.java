@@ -1,14 +1,13 @@
 package com.juranoaa.setting;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.util.Log;
 import android.widget.TextView;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.Extra;
+import org.androidannotations.annotations.OnActivityResult;
 import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.res.StringRes;
 
@@ -42,16 +41,10 @@ public class AAMainActivity extends Activity{
         AANextActivity_.intent(this).myStringExtra(TAG).startForResult(NEXT_REQUEST_CODE);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        super.onActivityResult(requestCode, resultCode, intent);
-        switch (requestCode){
-            case NEXT_REQUEST_CODE:
-                if(resultCode == RESULT_OK){
-                    String myStringExtra = intent.getExtras().getString("myStringExtra");
-                    Log.d(TAG, myStringExtra);
-                }
-                break;
+    @OnActivityResult(NEXT_REQUEST_CODE)
+    void onResult(int resultCode, @OnActivityResult.Extra String myStringExtra){
+        if(resultCode == RESULT_OK) {
+            Log.d(TAG, myStringExtra);
         }
     }
 }
