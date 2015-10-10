@@ -18,7 +18,7 @@ public class BoardDao {
             BoardProvider.COL_TITLE
     };
 
-    private BoardDao() {} //cannot create instance
+    private BoardDao() {}
 
     /**
      * Insert new Board to DB.
