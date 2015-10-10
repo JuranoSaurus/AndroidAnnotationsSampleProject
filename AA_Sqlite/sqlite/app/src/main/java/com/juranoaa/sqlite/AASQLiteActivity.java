@@ -15,6 +15,5 @@ public class AASQLiteActivity extends Activity {
     @App
     Context context;
 
-    private BaseSQLiteOpenHelper baseSQLiteOpenHelper = new BaseSQLiteOpenHelper(context, Constant.SQLite.DB_NAME, null, Constant.SQLite.DB_VERSION);
 
 }

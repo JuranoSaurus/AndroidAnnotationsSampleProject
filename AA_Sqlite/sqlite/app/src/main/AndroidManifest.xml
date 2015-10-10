@@ -7,6 +7,8 @@
                  android:supportsRtl="true"
                  android:theme="@style/AppTheme">
 
+        <provider android:name=".BoardProvider"
+            android:authorities="com.juranoaa.sqlite">
+        </provider>
     </application>
-
 </manifest>

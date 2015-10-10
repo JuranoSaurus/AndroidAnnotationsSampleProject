@@ -9,8 +9,6 @@ public class Board {
 
     private String title;
 
-    private String content;
-
     public Integer getId() {
         return id;
     }
@@ -27,12 +25,11 @@ public class Board {
         this.title = title;
     }
 
-    public String getContent() {
-        return content;
-    }
+    public Board() {}
 
-    public void setContent(String content) {
-        this.content = content;
+    public Board(Integer id, String title) {
+        this.id = id;
+        this.title = title;
     }
 
     @Override
@@ -40,7 +37,6 @@ public class Board {
         return "Board{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
                 '}';
     }
 }
