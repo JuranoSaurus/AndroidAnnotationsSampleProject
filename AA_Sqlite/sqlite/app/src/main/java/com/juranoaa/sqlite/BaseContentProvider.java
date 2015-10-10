@@ -2,7 +2,9 @@ package com.juranoaa.sqlite;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
+import android.content.UriMatcher;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 
@@ -10,8 +12,18 @@ import android.support.annotation.Nullable;
  * Created by SungGeun on 2015-10-10.
  */
 public class BaseContentProvider extends ContentProvider{
+
+    private BaseSQLiteOpenHelper baseSQLiteOpenHelper;
+
+    private static final UriMatcher sURIMatcher = new UriMatcher(UriMatcher.NO_MATCH);
+    static {
+        sURIMatcher.addURI(Constant.SQLite.AUTHORITY, Constant.SQLite.BASE_PATH, Constant.SQLite.TESTS);
+        sURIMatcher.addURI(Constant.SQLite.AUTHORITY, Constant.SQLite.BASE_PATH + "/#", Constant.SQLite.TEST_ID);
+    }
+
     @Override
     public boolean onCreate() {
+        baseSQLiteOpenHelper = new BaseSQLiteOpenHelper(getContext());
         return false;
     }
 
