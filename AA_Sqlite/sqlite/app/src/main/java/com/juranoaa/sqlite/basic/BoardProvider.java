@@ -1,4 +1,4 @@
-package com.juranoaa.sqlite;
+package com.juranoaa.sqlite.basic;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.util.Log;
+
+import com.juranoaa.sqlite.common.Constant;
 
 /**
  * Created by SungGeun on 2015-10-10.

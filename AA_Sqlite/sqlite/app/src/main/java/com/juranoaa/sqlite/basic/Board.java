@@ -1,4 +1,4 @@
-package com.juranoaa.sqlite;
+package com.juranoaa.sqlite.basic;
 
 /**
  * Created by SungGeun on 2015-10-10.

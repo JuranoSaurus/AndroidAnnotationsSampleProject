@@ -1,4 +1,4 @@
-package com.juranoaa.sqlite;
+package com.juranoaa.sqlite.basic;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;

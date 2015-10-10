@@ -14,7 +14,7 @@
             </intent-filter>
         </activity>
 
-        <provider android:name=".BoardProvider"
+        <provider android:name=".basic.BoardProvider"
             android:authorities="com.juranoaa.sqlite">
         </provider>
     </application>
